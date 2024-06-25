@@ -1,14 +1,20 @@
-
-body {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 div {
   border: 1px solid blue;
 }
 
-svg {
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+svg,
+img {
   height: 1.5rem;
+}
+
+img {
+  height: 2.5rem;
 }
 
 .container {
@@ -20,6 +26,13 @@ svg {
   grid-row: 1 / 3;
 }
 
+.sidebar p {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+}
+
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -27,13 +40,13 @@ svg {
 
 .projectTitle {
   grid-row: 1 / 3;
-
 }
 
 .projects {
   grid-row: 2 / 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
 }
 
 .announcementsTitle {
@@ -51,4 +64,64 @@ svg {
   grid-template-columns: 1fr 1fr;
 }
 
+.welcome {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+}
 
+.welcome img {
+  height: 4rem;
+}
+
+.welcome p {
+  margin: 0;
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  height: 2rem;
+  margin: 2rem;
+}
+
+.profile {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 1fr repeat(3, 5rem);
+}
+
+.profile svg {
+  justify-self: end;
+  grid-column-start: 2;
+}
+
+.profile img {
+  justify-self: center;
+  grid-column-start: 3;
+}
+
+.profile p {
+  grid-column-start: 4;
+  margin: 0;
+}
+
+.project {
+  display: grid;
+  grid-template-rows: 1fr 3rem;
+}
+
+.trend {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  align-items: center;
+}
+
+.trend p {
+  grid-column: 1 / 3;
+}
+
+.social {
+justify-self: end;
+}
