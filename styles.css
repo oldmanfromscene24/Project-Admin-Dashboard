@@ -1,5 +1,14 @@
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 div {
   border: 1px solid blue;
+}
+
+svg {
+  height: 1.5rem;
 }
 
 .container {
@@ -36,3 +45,10 @@ div {
   display: grid;
   grid-template-rows: 5rem 1fr;
 }
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
