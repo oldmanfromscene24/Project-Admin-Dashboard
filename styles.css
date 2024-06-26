@@ -1,8 +1,3 @@
-div {
-  border: 1px solid blue;
-}
-
-
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -24,22 +19,43 @@ img {
 
 .sidebar {
   grid-row: 1 / 3;
+  display: grid;
+  grid-template-rows: 5rem 15rem 1fr;
+  background-color: lightblue;
+  padding-left: 1.5rem;
+  font-weight: bold;
 }
 
-.sidebar p {
+.sidebar div div {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 2rem 1fr;
   align-items: center;
 }
 
+.dashboard {
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+}
+
+.dashboard svg {
+  height: 2rem;
+}
+
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  background-color: lightgray;
 }
 
 .projectTitle {
   grid-row: 1 / 3;
+}
+
+.projectTitle h1 {
+  margin-left: 1rem;
 }
 
 .projects {
@@ -47,6 +63,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
+  margin: 0 1rem 1rem 1rem;
+  gap: 1rem;
 }
 
 .announcementsTitle {
@@ -54,20 +72,54 @@ img {
   grid-template-rows: 5rem 1fr;
 }
 
+.announcements {
+  display: grid;
+  background-color: white;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.announcement > p {
+  margin-top: 0;
+}
+
+.announcement > h2 {
+  margin-bottom: 0;
+}
+
 .title {
   display: grid;
   grid-template-rows: 5rem 1fr;
+  font-size: 0.75rem;
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5rem 5rem;
+  box-shadow: 0px 4px 5px -2px grey;
+  position: relative;
 }
 
 .welcome {
   display: grid;
   grid-template-columns: 5rem 1fr;
   align-items: center;
+  font-weight: bold;
+  padding: 0 1rem 0 1rem;
+}
+
+.welcome p:first-child {
+  font-size: small;
+}
+
+.welcome p:nth-child(2) {
+  font-size: large;
 }
 
 .welcome img {
@@ -83,13 +135,25 @@ img {
   grid-auto-flow: column;
   height: 2rem;
   margin: 2rem;
+  justify-content:end;
+  gap: 1rem;
+}
+
+button {
+  border-radius: 1rem;
+  border: none;
+  width: 5rem;
+  background-color: lightblue;
 }
 
 .profile {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  grid-template-columns: 1fr repeat(3, 5rem);
+  font-weight: bold;
+  justify-content:end;
+  gap: 1rem;
+  margin: 2rem;
 }
 
 .profile svg {
@@ -110,6 +174,22 @@ img {
 .project {
   display: grid;
   grid-template-rows: 1fr 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid gold;
+}
+
+.project > * {
+  margin-left: 1rem;
+}
+
+.trending {
+  display: grid;
+  background-color: white;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .trend {
@@ -118,10 +198,34 @@ img {
   align-items: center;
 }
 
-.trend p {
-  grid-column: 1 / 3;
+.trend > img {
+  grid-row: 1 / 3;
 }
 
+.trend>h2 {
+  margin-bottom: 0;
+}
+
+.trend>p {
+  margin-top: 0;
+}
+
+
 .social {
-justify-self: end;
+  justify-self: end;
+  margin-right: 1rem;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+input {
+  height: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: lightgrey;
 }
